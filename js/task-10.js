@@ -19,6 +19,10 @@ let arrayBoxes = [];
 
 function onCreateBoxes() {
   const amount = Number(refs.userInput.value);
+  if (amount <= 0 || amount >= 100) {
+     refs.userInput.value = ""; 
+    return alert("Please, write other number < 100, but number > 0");
+  }
   let width = 30;
   let height = 30;
   for (let i = 0; i < amount; i += 1){
