@@ -13,7 +13,7 @@ function onContainerForm(event) {
     event.preventDefault(); //відміна стандартної поведінки перезавантаження
     if (refs.emailInput.value === ""
         || refs.passwordInput.value === "") {
-        alert("Please, fill all input");
+       return alert("Please, fill all input");
     }
 
     const formelements = event.currentTarget.elements; 
